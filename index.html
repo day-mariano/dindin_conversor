@@ -4,19 +4,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>Dindin</title>
 </head>
 <body>
   <main>
     <div class="divImg">
       <h1>Dindin</h1>
-      <p>Converta seu din-din agora</p>
-      <img src="imagens/currency.png">
+      <p>Converta seu dindin agora entre as moedas Real, Dolar, Euro ou Bitcoin</p>
+      <img id="imgCurrency" src="imagens/currency.png">
     </div>
 
     <div class="divConversor">
-      <div class="divDe">
-        <select id="selectDe">
+      <div class="divDe divInputs">
+        <select id="selectDe" class="selects">
           <option value="USD">USD</option>
           <option value="BRL">BRL</option>
           <option value="EUR">EUR</option>
@@ -24,9 +25,11 @@
         </select>
         <input type="number" name="" id="">
       </div>
-      <button>converter</button>
-      <div class="divPara">
-        <select id="selectPara">
+      <button class="buttonConverter">
+        <img src="imagens/dolar.png" id="imgButton">
+      </button>
+      <div class="divPara divInputs">
+        <select id="selectPara" class="selects">
           <option value="USD">USD</option>
           <option value="BRL">BRL</option>
           <option value="EUR">EUR</option>

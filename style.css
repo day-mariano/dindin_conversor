@@ -18,6 +18,7 @@ main {
 
 h1 {
   font-weight: bold;
+  color: rgb(216, 162, 1);
 }
 .divImg {
   background-color: rgba(255, 255, 255, 0.62);

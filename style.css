@@ -41,6 +41,10 @@ h1 {
   width: 250px;
 }
 
+.textDiv {
+  display: none;
+}
+
 .selects {
   border-color: rgb(188, 145, 36);
   border-width: 2px;
@@ -75,10 +79,12 @@ h1 {
 
 .buttonConverter {
   background: none;
-  width: 70px;
+  width: 75px;
   border-style: solid;
   border-radius: 100px;
   border-style: none;
+  display: flex;
+  justify-content: center;
 }
 
 #imgButton {
@@ -86,12 +92,37 @@ h1 {
   margin: 10px;
 }
 
-#imgButton:hover{
-  width: 55px;
-  margin: 0px;
+.buttonConverter:hover{
+  
+  box-shadow: rgba(216, 162, 1, 0.4) 0px 2px 4px 0px, rgba(216, 162, 1, 0.4) 0px 2px 16px 0px;
+}
+
+.buttonConverter:active{
+  border-style: solid;
+  border-color: rgba(216, 162, 1, 0.503);
 }
 
 #imgCurrency {
   width: 250px;
   margin: 2rem auto 1rem;
+}
+
+@media (max-width: 768px) {
+  .divImg {
+      display: none;
+  }
+  .textDiv {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  main {
+    margin: 4rem;
+  }
+  .divConversor {
+    padding: 3rem;
+    width: auto;
+  }
+  .divInputs {
+    margin: 1rem;
+  }
 }

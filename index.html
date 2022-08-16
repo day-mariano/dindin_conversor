@@ -11,6 +11,8 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+
+  <script src="script.js" defer></script>
 </head>
 <body>
   <main>
@@ -19,12 +21,12 @@
       <p>Converta seu dindin agora entre as moedas Real, Dolar, Euro ou Bitcoin</p>
       <img id="imgCurrency" src="imagens/currency.png">
     </div>
-
     <div class="divConversor">
       <div class="textDiv">
         <h1>Dindin</h1>
       <p>Converta seu dindin agora entre as moedas Real, Dolar, Euro ou Bitcoin</p>
       </div>
+
       <div class="divDe divInputs">
         <select id="selectDe" class="selects">
           <option value="USD">USD</option>
@@ -32,20 +34,22 @@
           <option value="EUR">EUR</option>
           <option value="BTC">BTC</option>
         </select>
-        <input type="number" name="" id="">
+        <input type="number" id="inputDe">
       </div>
-      <button class="buttonConverter animate__animated animate__flip">
+
+      <button class="buttonConverter animate__animated animate__flip" onclick="converter()">
         <img src="imagens/dolar.png" id="imgButton">
       </button>
+
       <div class="divPara divInputs">
         <select id="selectPara" class="selects">
           <option value="USD">USD</option>
           <option value="BRL">BRL</option>
           <option value="EUR">EUR</option>
-          <option value="BTC">BTC</option>
         </select>
-        <p class="resultado">123</p>
+        <p id="resultado"></p>
       </div>
+
     </div>
   </main>
 </body>

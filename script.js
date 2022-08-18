@@ -1,12 +1,10 @@
 const buttonConverter = document.getElementsByClassName('buttonConverter')
-var moedas = ''
-var currentBid = ''
 
-function converter() {
+function consultarAPI() {
   const selectDe = document.getElementById('selectDe');
-  const inputDe = document.getElementById('inputDe');
+  
   const selectPara = document.getElementById('selectPara');
-  const resultado = document.getElementById('resultado');
+ 
   
   const options = {
     method: 'GET',
@@ -22,8 +20,14 @@ function converter() {
 }
 
 const showBid = (result)=> {
-  moedas = selectDe.value+selectPara.value
-  currentBid = result[moedas].bid
-  console.log(currentBid)
-  return currentBid
+  var moedas = selectDe.value+selectPara.value
+  var currentBid = result[moedas].bid
+  return converter(currentBid)
 }
+
+ function converter(currentBid) {
+  const inputDe = document.getElementById('inputDe');
+  const resultado = document.getElementById('resultado');
+
+  resultado.innerHTML = `${inputDe.value*currentBid}`
+ }
